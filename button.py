@@ -1,4 +1,4 @@
-import tkinter
+from tkinter import*
 import requests
 
 def say():
@@ -6,15 +6,13 @@ def say():
     result = requests.get(url,params={"a":"b"})
     print(result.text)
 
-win = tkinter.Tk()
-win.title("mysql")
-win.geometry("400x500+300+200")
+window = Tk()
+window.title("mysql")
+window.geometry("400x500+300+200")
 
-button = tkinter.Button(win,text="Button",command=say)
+button = Button(win,text="Button",command=say)
 button.pack()
 
-button1= tkinter.Button(win,text="关闭",command=win.quit,width=2,height=5)
+button1= Button(win,text="关闭",command=win.quit,width=2,height=5)
 button1.pack()
-
-
-win.mainloop()
+window.mainloop()
